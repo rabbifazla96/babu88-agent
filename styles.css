@@ -22,8 +22,8 @@ body {
 
 .agent-report-text {
     color: #007d96;
-    font-size: 1.25rem;
-    font-weight: medium;
+    font-size: 1.5rem;
+    font-weight: 500;
     margin: 0;
 }
 
@@ -83,6 +83,7 @@ body {
 .logo-text {
     color: #007d96;
     font-weight: medium;
+    font-size: 1.25rem;
     margin: 0;
 }
 
@@ -108,20 +109,20 @@ body {
 .input-group label {
     color: #007d96;
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 0.6rem;
 }
 
 .search-input {
     padding: 8px 12px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    font-size: 0.9rem;  /* Decreased from 1rem */
+    font-size: 0.7rem;  /* Decreased from 1rem */
     height: 40px;
     box-sizing: border-box;
 }
 
 .search-input::placeholder {
-    color: #666666;  /* Changed to grey */
+    color: #474747;  /* Changed to grey */
     font-size: 0.9rem;  /* Match input text size */
 }
 
@@ -149,8 +150,8 @@ body {
 }
 
 .field-group label {
-    color: #333333;
-    font-size: 0.65rem;  /* Decreased from 0.75rem */
+    color: #6b6b6b;
+    font-size: 0.6rem;  /* Decreased from 0.75rem */
     font-weight: normal;
     text-transform: uppercase;
     position: absolute;
@@ -172,7 +173,7 @@ body {
     align-items: center;
     justify-content: center;
     width: 30%;
-    font-weight: bold;
+    font-weight: normal;
     margin-top: 10px;
     margin-left: auto;
 }
@@ -191,15 +192,15 @@ body {
 .today-date {
     position: absolute;
     left: 12px;
-    color: #666;
-    font-size: 0.9rem;
+    color: #727272;
+    font-size: 0.75rem;
     pointer-events: none;
 }
 
 .date-icon {
     position: absolute;
     right: 15px;
-    color: #444;
+    color: #727272;
     cursor: pointer;
     font-size: 1.2rem;  /* Increased icon size */
 }
@@ -269,14 +270,14 @@ body {
 
 .tab-buttons {
     display: flex;
-    gap: 2px;
+    gap: 0px;
     width: 100%;
 }
 
 .tab-btn {
     flex: 1;
     padding: 10px 20px;
-    background: #00b3d6;
+    background: #00bcd4;
     border: none;
     color: #e6e6e6;
     font-size: 0.875rem;
@@ -288,7 +289,7 @@ body {
 }
 
 .tab-btn.active {
-    background: #00b3d6;
+    background: #00bcd4;
     color: white;
     font-weight: medium;
 }
@@ -334,11 +335,11 @@ body {
 }
 
 .status-header {
-    background: #e6f7fa;
-    color: #007d96;
+    background: #e6f6ff;
+    color: #65acf8;
     font-size: 0.75rem;
     padding: 8px 12px;
-    font-weight: 500;
+    font-weight: 550;
     text-align: center;
 }
 
@@ -365,11 +366,11 @@ body {
 }
 
 .commission-header {
-    background: #00517a;
+    background: #2179ab;
     color: white;
     font-size: 0.875rem;
     padding: 10px 15px;
-    font-weight: 500;
+    font-weight: 550;
     text-align: center;
 }
 
@@ -378,20 +379,20 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;  /* Increased from 12px */
+    gap: 12px;  /* Increased from 12px */
     text-align: center;
 }
 
 .commission-content i {
-    color: #333;
+    color: #4e4e4e;
     font-size: 1.1rem;
     cursor: pointer;
 }
 
 .commission-amount {
-    color: #28a745;
-    font-size: 1.2rem;  /* Decreased from 1.5rem */
-    font-weight: 500;
+    color: #71c074;
+    font-size: 0.9rem;  /* Decreased from 1.5rem */
+    font-weight: 550;
     min-width: 120px;
     text-align: center;
 }
@@ -440,7 +441,7 @@ body {
     left: -250px;
     width: 250px;
     height: calc(100vh - 60px);
-    background: #00517a;
+    background: #001529;
     transition: left 0.3s ease;
     z-index: 1000;
 }
@@ -469,15 +470,15 @@ body {
 }
 
 .menu-item.active {
-    background-color: #00b3d6;
+    background-color: #1890ff;
 }
 
 .menu-item:hover {
-    background-color: #006491;
+    background-color: #0264be;
 }
 
 .submenu {
-    background: #333;
+    background: #000c17;
     display: none;
     padding: 8px 0;  /* Increased from 5px */
 }

@@ -26,26 +26,26 @@ document.querySelectorAll('.tab-btn').forEach(button => {
     });
 });
 
-// Side menu toggle
-document.querySelector('.humber-lines').addEventListener('click', function() {
-    document.getElementById('sideMenu').classList.toggle('open');
-});
-
 // Initialize side menu for all pages
 document.addEventListener('DOMContentLoaded', function() {
+    // Get elements
     const hamburger = document.querySelector('.humber-lines');
     const sideMenu = document.getElementById('sideMenu');
     
-    hamburger.addEventListener('click', function() {
-        sideMenu.classList.toggle('open');
-    });
+    // Single click handler for hamburger
+    if (hamburger && sideMenu) {
+        hamburger.onclick = function(e) {
+            e.stopPropagation();
+            sideMenu.classList.toggle('open');
+        };
 
-    // Close menu when clicking outside
-    document.addEventListener('click', function(e) {
-        if (!sideMenu.contains(e.target) && !hamburger.contains(e.target)) {
-            sideMenu.classList.remove('open');
-        }
-    });
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!sideMenu.contains(e.target) && !hamburger.contains(e.target)) {
+                sideMenu.classList.remove('open');
+            }
+        });
+    }
 });
 
 // Menu item click handler

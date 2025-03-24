@@ -25,3 +25,47 @@ document.querySelectorAll('.tab-btn').forEach(button => {
         document.getElementById(button.dataset.tab).classList.add('active');
     });
 });
+
+// Side menu toggle
+document.querySelector('.humber-lines').addEventListener('click', function() {
+    document.getElementById('sideMenu').classList.toggle('open');
+});
+
+// Initialize side menu for all pages
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.humber-lines');
+    const sideMenu = document.getElementById('sideMenu');
+    
+    hamburger.addEventListener('click', function() {
+        sideMenu.classList.toggle('open');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!sideMenu.contains(e.target) && !hamburger.contains(e.target)) {
+            sideMenu.classList.remove('open');
+        }
+    });
+});
+
+// Menu item click handler
+document.querySelectorAll('.menu-item').forEach(item => {
+    item.addEventListener('click', function(e) {
+        if (this.nextElementSibling && this.nextElementSibling.classList.contains('submenu')) {
+            e.preventDefault();
+            this.classList.toggle('active');
+        }
+        document.querySelectorAll('.menu-item').forEach(i => {
+            if (i !== this) i.classList.remove('active');
+        });
+    });
+});
+
+// Dropdown toggle functionality
+function toggleDropdown(index) {
+    const card = document.querySelectorAll('.card-content')[index];
+    const dropdown = document.querySelectorAll('.dropdown-menu')[index];
+    
+    card.classList.toggle('active');
+    dropdown.classList.toggle('active');
+}

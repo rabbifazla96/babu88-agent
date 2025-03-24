@@ -276,9 +276,9 @@ body {
 .tab-btn {
     flex: 1;
     padding: 10px 20px;
-    background: rgba(0, 125, 150, 0.1);
+    background: #00b3d6;
     border: none;
-    color: #666;
+    color: #e6e6e6;
     font-size: 0.875rem;
     cursor: pointer;
     border-radius: 4px 4px 0 0;
@@ -316,4 +316,82 @@ body {
 
 .tab-pane.active {
     display: block;
+}
+
+.status-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 10px 0;
+}
+
+.status-box {
+    background: white;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.status-header {
+    background: #e6f7fa;
+    color: #007d96;
+    font-size: 0.75rem;
+    padding: 8px 12px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.status-label {
+    color: #666;
+    font-size: 0.75rem;
+    margin-bottom: 8px;
+}
+
+.status-value {
+    color: #333;
+    font-size: 1rem;  /* Decreased from 1.25rem */
+    font-weight: 500;
+    padding: 12px;
+    text-align: center;
+}
+
+.commission-box {
+    background: white;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.commission-header {
+    background: #00517a;
+    color: white;
+    font-size: 0.875rem;
+    padding: 10px 15px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.commission-content {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;  /* Increased from 12px */
+    text-align: center;
+}
+
+.commission-content i {
+    color: #333;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.commission-amount {
+    color: #28a745;
+    font-size: 1.2rem;  /* Decreased from 1.5rem */
+    font-weight: 500;
+    min-width: 120px;
+    text-align: center;
 }

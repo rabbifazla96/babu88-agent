@@ -1,0 +1,319 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'shippori', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    letter-spacing: 0px !important;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+.agent-report {
+    padding: 20px 20px 0 20px;
+}
+
+.agent-report-text {
+    color: #007d96;
+    font-size: 1.25rem;
+    font-weight: medium;
+    margin: 0;
+}
+
+.humber-lines {
+    width: 25px; /* Decreased from 30px */
+    height: 20px;
+    margin: 0;  /* Remove margin since we're using space-between */
+    position: relative;
+    cursor: pointer;
+}
+
+.line {
+    width: 100%;
+    height: 2px; /* Decreased from 3px */
+    background-color: #007d96;
+    position: absolute;
+    border-radius: 1px; /* Adjusted for thinner lines */
+    transition: all 0.3s ease;
+}
+
+.line-01 {
+    top: 2px;  /* Changed from 0 */
+}
+
+.line-02 {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.line-03 {
+    bottom: 2px;  /* Changed from 0 */
+}
+
+.navbar-icons {
+    display: flex;
+    gap: 10px;  /* Decreased from 20px */
+    margin: 0;  /* Remove margins since we're using space-between */
+}
+
+.navbar-icons i {
+    color: #007d96;
+    font-size: 1.2rem;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    border: 2px solid #007d96;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-icons i:hover {
+    opacity: 0.8;
+}
+
+.logo-text {
+    color: #007d96;
+    font-weight: medium;
+    margin: 0;
+}
+
+.user-name-text {
+    color: #666;
+    margin: 0;
+}
+
+.search-box {
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 15px 20px;  /* Adjusted margin */
+    border-radius: 8px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-group label {
+    color: #007d96;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.search-input {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;  /* Decreased from 1rem */
+    height: 40px;
+    box-sizing: border-box;
+}
+
+.search-input::placeholder {
+    color: #666666;  /* Changed to grey */
+    font-size: 0.9rem;  /* Match input text size */
+}
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1;
+    width: 100%;
+}
+
+.field-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+    position: relative;
+    padding-top: 15px;  /* Add space for absolute label */
+}
+
+.field-group label {
+    color: #333333;
+    font-size: 0.65rem;  /* Decreased from 0.75rem */
+    font-weight: normal;
+    text-transform: uppercase;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    padding: 0 4px;
+}
+
+.search-button {
+    background: #007d96;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 20px;
+    cursor: pointer;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: auto;
+}
+
+.search-button:hover {
+    opacity: 0.9;
+}
+
+.date-input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%; /* Make container full width */
+}
+
+.today-date {
+    position: absolute;
+    left: 12px;
+    color: #666;
+    font-size: 0.9rem;
+    pointer-events: none;
+}
+
+.date-icon {
+    position: absolute;
+    right: 15px;
+    color: #444;
+    cursor: pointer;
+    font-size: 1.2rem;  /* Increased icon size */
+}
+
+.date-input {
+    width: 100%;
+    padding-right: 35px !important;
+    color: #666;
+    height: 40px;
+    border: 1px solid #999 !important;
+    background-color: #f5f5f5;
+}
+
+/* Hide default text */
+.date-input:invalid {
+    color: transparent;
+}
+
+.date-input::-webkit-datetime-edit { 
+    display: none;
+}
+
+.date-input:focus::-webkit-datetime-edit { 
+    display: block;
+    color: #666;
+}
+
+.date-input::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Ensure it's above other elements */
+}
+
+.info-boxes-container {
+    display: flex;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.info-box {
+    flex: 1;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 12px;  /* Decreased from 20px */
+    text-align: center;
+}
+
+.info-text {
+    color: #007d96;
+    font-size: .875rem;
+    font-weight: normal;
+    margin: 0;
+}
+
+.tab-container {
+    padding: 0 20px;
+    margin-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.tab-buttons {
+    display: flex;
+    gap: 2px;
+    width: 100%;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 10px 20px;
+    background: rgba(0, 125, 150, 0.1);
+    border: none;
+    color: #666;
+    font-size: 0.875rem;
+    cursor: pointer;
+    border-radius: 4px 4px 0 0;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+    background: #00b3d6;
+    color: white;
+    font-weight: medium;
+}
+
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #ffd700;
+}
+
+.tab-content {
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0 4px 4px 4px;
+    padding: 20px;
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}

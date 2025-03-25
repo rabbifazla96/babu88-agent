@@ -352,11 +352,12 @@ body {
 }
 
 .status-header {
-    background: #e6f6ff;
-    color: #65acf8;
-    font-size: 0.75rem;
+    background-color: rgb(230, 246, 255);
+    color: rgb(132, 192, 255);
+    font-family: "KoHo", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
     padding: 8px 12px;
-    font-weight: 550;
     text-align: center;
 }
 
@@ -367,9 +368,9 @@ body {
 }
 
 .status-value {
-    color: #333;
-    font-size: 1rem;  /* Decreased from 1.25rem */
-    font-weight: 500;
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 14px;
+    font-family: "KoHo SemiBold", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
     padding: 12px;
     text-align: center;
 }
@@ -383,11 +384,13 @@ body {
 }
 
 .commission-header {
-    background: #2179ab;
-    color: white;
-    font-size: 0.875rem;
+    background-color: rgb(33, 121, 171);
+    color: rgb(255, 255, 255);
+    font-family: "KoHo", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
     padding: 10px 15px;
-    font-weight: 550;
     text-align: center;
 }
 
@@ -407,13 +410,13 @@ body {
 }
 
 .commission-amount {
-    color: #71c074;
-    font-size: 0.9rem;  /* Decreased from 1.5rem */
-    font-weight: 550;
+    color: rgb(102, 187, 106);
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "KoHo SemiBold", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
     min-width: 120px;
     text-align: center;
     font-variant-numeric: tabular-nums;
-    font-family: monospace;
     white-space: nowrap;
 }
 
@@ -562,8 +565,9 @@ body {
 }
 
 .dropdown-menu.active {
+    margin-top: 10px;
     box-shadow: none;
-    background: white;
+    background: none;
     border-color: #00bcd4;
 }
 
@@ -601,7 +605,7 @@ body {
     opacity: 0;
     transform: translateY(-10px);
     transition: opacity 0.3s ease, transform 0.3s ease;
-    margin-top: 50px;
+    /* margin-top: 50px; */
 }
 
 .card-content.active {
@@ -646,7 +650,7 @@ body {
     background: white;
     border: 1px solid #e6e6e6;
     border-radius: 4px;
-    margin-top: 15px;
+    margin-top: 54px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -688,10 +692,11 @@ body {
 
 .stat-value {
     color: #212121;
-    font-size: 0.875rem;
-    font-weight: 500;
+    font-size: 14px;
+    font-family: "KoHo", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-variant-numeric: tabular-nums;
-    font-family: monospace;
+    font-weight: 500;
+    text-align: left;
 }
 
 .stat-value.negative {

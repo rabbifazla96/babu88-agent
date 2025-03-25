@@ -13,7 +13,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 15px;
+    padding: 0 16px;
 }
 
 .agent-report {
@@ -81,14 +81,22 @@ body {
 }
 
 .logo-text {
-    color: #007d96;
-    font-weight: medium;
-    font-size: 1.25rem;
+    color: rgb(0, 125, 150);
+    font-family: koho, "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-feature-settings: "tnum";
+    font-size: 18.75px;
+    line-height: 28.125px;
+    font-weight: 500;
     margin: 0;
 }
 
 .user-name-text {
-    color: #666;
+    color: rgba(0, 0, 0, 0.87);
+    font-family: "koho bold", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-feature-settings: "tnum";
+    font-size: 13.125px;
+    font-weight: 700;
+    line-height: 18.75px;
     margin: 0;
 }
 
@@ -395,6 +403,9 @@ body {
     font-weight: 550;
     min-width: 120px;
     text-align: center;
+    font-variant-numeric: tabular-nums;
+    font-family: monospace;
+    white-space: nowrap;
 }
 
 .lifetime-commission {
@@ -409,30 +420,41 @@ body {
 
 .lifetime-header {
     background: #00bcd4;
-    color: #f9fdfe;
-    font-size: 0.875rem;
-    padding: 12px 15px;
-    font-weight: 500;
+    color: rgb(255, 255, 255);
+    font-family: "koho bold", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-feature-settings: "tnum";
+    font-size: 13.125px;
+    font-weight: 700;
+    padding: 16px 24px;
     text-align: center;
 }
 
 .lifetime-amount {
-    color: #212121;
-    font-size: 1.1rem;
-    font-weight: 500;
-    padding: 12px;
+    color: rgba(0, 0, 0, 0.87);
+    font-family: "koho bold", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-feature-settings: "tnum";
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
     text-align: center;
+    white-space: nowrap;
+    padding: 16px 24px;
 }
 
 .commission-page {
-    padding: 0 20px;  /* Add horizontal padding */
+    padding: 0 20px;  /* Consistent padding */
 }
 
 .page-title {
-    color: #007d96;
-    font-size: 1.25rem;
-    font-weight: medium;
-    margin: 20px 0;  /* Changed from margin: 20px */
+    color: rgb(0, 125, 150);
+    font-family: shippori, "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-feature-settings: "tnum";
+    font-size: 22.5px;
+    font-weight: 500;
+    height: auto;
+    letter-spacing: normal;
+    line-height: 30px;
+    margin: 20px 0;
 }
 
 .side-menu {
@@ -512,25 +534,26 @@ body {
 }
 
 .date-filters {
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
+    margin: 24px auto;  /* Changed to auto for horizontal centering */
 }
 
 .dropdown-menu {
-    background: #f8f9fa;
-    border: 1px solid #dee2e6;
+    border: none!important;
+    box-shadow: 0 0px 3px rgba(0, 0, 0, 0.2);
+    width: 88.6%;
+    background: #ffffff;
     border-radius: 4px;
-    padding: 8px 15px;
+    padding: 16px 24px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
-    flex: 1;
     transition: all 0.3s ease;
+    box-sizing: border-box;
 }
 
 .dropdown-menu.active {
+    box-shadow: none;
     background: white;
     border-color: #00bcd4;
 }
@@ -539,12 +562,14 @@ body {
     color: #495057;
     font-size: 0.8rem;
     font-weight: 500;
+    white-space: nowrap;
 }
 
 .dropdown-menu i {
-    color: #00bcd4;
-    font-size: 0.7rem;
+    color: #495057;
+    font-size: 0.8rem;
     transition: transform 0.3s ease;
+    margin-left: 10px;
 }
 
 .dropdown-menu.active i {
@@ -552,10 +577,8 @@ body {
 }
 
 .dropdown-cards {
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    width: 100%;
+    margin: 0 auto;  /* Center horizontally */
 }
 
 .card-content {
@@ -563,13 +586,19 @@ body {
     border: 1px solid #dee2e6;
     border-radius: 4px;
     padding: 12px;
-    display: none;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    margin-top: 0;  /* Remove margin-top since we're using gap */
+    display: none;  /* Hide by default */
+    box-shadow: 0 0px 3px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    margin-top: 50px;
 }
 
 .card-content.active {
     display: block;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .earning-detail {
@@ -602,4 +631,64 @@ body {
 
 .logo:hover {
     opacity: 0.8;
+}
+
+.stats-card {
+    background: white;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    margin-top: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stats-header {
+    background: #f8f9fa;
+    color: #495057;
+    font-size: 0.875rem;
+    padding: 12px 15px;
+    font-weight: 500;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.stats-content {
+    padding: 15px;
+}
+
+.mg-12 {
+    margin-top: 12px;
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stat-item:last-child {
+    border-bottom: none;
+}
+
+.stat-label {
+    color: rgba(0, 0, 0, 0.87);
+    font-family: 'koho', 'Microsoft YaHei', sans-serif;
+    font-feature-settings: "tnum";
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+}
+
+.stat-value {
+    color: #212121;
+    font-size: 0.875rem;
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+    font-family: monospace;
+}
+
+.stat-value.negative {
+    color: #dc3545;
+}
+
+.stat-value.positive {
+    color: #28a745;
 }

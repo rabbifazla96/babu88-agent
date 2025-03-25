@@ -63,9 +63,18 @@ document.querySelectorAll('.menu-item').forEach(item => {
 
 // Dropdown toggle functionality
 function toggleDropdown(index) {
-    const card = document.querySelectorAll('.card-content')[index];
-    const dropdown = document.querySelectorAll('.dropdown-menu')[index];
+    const cards = document.querySelectorAll('.card-content');
+    const dropdowns = document.querySelectorAll('.dropdown-menu');
     
-    card.classList.toggle('active');
-    dropdown.classList.toggle('active');
+    // Close other dropdowns and cards
+    cards.forEach((card, i) => {
+        if (i !== index) {
+            card.classList.remove('active');
+            dropdowns[i].classList.remove('active');
+        }
+    });
+
+    // Toggle clicked dropdown and card
+    cards[index].classList.toggle('active');
+    dropdowns[index].classList.toggle('active');
 }

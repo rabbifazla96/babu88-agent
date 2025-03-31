@@ -422,31 +422,35 @@ body {
 
 .lifetime-commission {
     background: white;
-    border: 1px solid #e6e6e6;
+    /* border: 1px solid #e6e6e6; */
     border-radius: 4px;
     overflow: hidden;
     margin: 0;  /* Reset margin */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
     width: 100%;  /* Ensure full width */
+}
+
+.lifetime-commission-container {
+    padding: 0 24px;
 }
 
 .lifetime-header {
     background: #00bcd4;
     color: rgb(255, 255, 255);
-    font-family: "koho bold", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "koho", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-feature-settings: "tnum";
-    font-size: 13.125px;
-    font-weight: 700;
+    font-size: 13px;
+    font-weight: 600;
     padding: 16px 24px;
     text-align: center;
 }
 
 .lifetime-amount {
     color: rgba(0, 0, 0, 0.87);
-    font-family: "koho bold", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "koho", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-feature-settings: "tnum";
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 550;
     line-height: 21px;
     text-align: center;
     white-space: nowrap;
@@ -454,7 +458,31 @@ body {
 }
 
 .commission-page {
-    padding: 0 20px;  /* Consistent padding */
+    /* padding: 0 24px; */
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    max-width: 100%;
+}
+.filters-container {
+    padding: 0 16px;
+}
+.filters {
+    gap: 0;  
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    margin-top: 16px;
+}
+
+.filters-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #e6e6e6;
+    margin: 0;
+}
+
+.page-title-container {
+    padding: 0 24px;
 }
 
 .page-title {
@@ -466,7 +494,7 @@ body {
     height: auto;
     letter-spacing: normal;
     line-height: 30px;
-    margin: 20px 0;
+    margin: 32px 0px 16px 0px;
 }
 
 .side-menu {
@@ -546,15 +574,31 @@ body {
 }
 
 .date-filters {
-    margin: 24px auto;  /* Changed to auto for horizontal centering */
+    margin: 24px auto 0 auto;  
 }
 
-.dropdown-menu {
-    border: none!important;
-    box-shadow: 0 0px 3px rgba(0, 0, 0, 0.2);
-    width: 88.6%;
+.date-filters-01 {
+    margin: 0;
+    width: 100%;
+}
+
+.date-filters-02 {
+    margin: 0; 
+    width: 100%;
+    border-top: none;  
+    padding-top: 0;   
+}
+
+.date-filters-03 {
+    margin: 0;
+    width: 100%;
+    border-top: none;
+    padding-top: 0;
+}
+
+.dropdown-menu-01 {
+    border: none !important;
     background: #ffffff;
-    border-radius: 4px;
     padding: 16px 24px;
     display: flex;
     align-items: center;
@@ -562,50 +606,143 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     box-sizing: border-box;
-}
-
-.dropdown-menu.active {
-    margin-top: 10px;
-    box-shadow: none;
-    background: none;
-    border-color: #00bcd4;
-}
-
-.dropdown-menu span {
-    color: #495057;
-    font-size: 0.8rem;
-    font-weight: 500;
-    white-space: nowrap;
-}
-
-.dropdown-menu i {
-    color: #495057;
-    font-size: 0.8rem;
-    transition: transform 0.3s ease;
-    margin-left: 10px;
-}
-
-.dropdown-menu.active i {
-    transform: rotate(180deg);
-}
-
-.dropdown-cards {
+    margin: 0;
+    position: relative;
+    z-index: 2;
     width: 100%;
-    margin: 0 auto;  /* Center horizontally */
 }
 
-.card-content {
+.dropdown-cards-01 {
+    width: 100%;
+    margin: 0;  /* Remove margin */
+    position: relative;
+}
+
+.dropdown-cards-01 .card-content {
     background: white;
-    border: 1px solid #dee2e6;
     border-radius: 4px;
     padding: 12px;
-    display: none;  /* Hide by default */
+    display: none;
     box-shadow: 0 0px 3px rgba(0, 0, 0, 0.2);
     margin-top: 10px;
     opacity: 0;
     transform: translateY(-10px);
     transition: opacity 0.3s ease, transform 0.3s ease;
-    /* margin-top: 50px; */
+    position: relative;
+    width: 100%;
+}
+
+.dropdown-menu-02 {
+    border: none !important;
+    background: #ffffff;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+.dropdown-cards-02 {
+    width: 100%;
+    margin: 0;
+    position: relative;
+}
+
+.dropdown-cards-02 .card-content {
+    background: white;
+    border-radius: 4px;
+    padding: 12px;
+    display: none;
+    box-shadow: 0 0px 3px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    position: relative;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.dropdown-menu-03 {
+    border: none !important;
+    background: #ffffff;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+.dropdown-cards-03 {
+    width: 100%;
+    margin: 0;
+    position: relative;
+}
+
+.dropdown-cards-03 .card-content {
+    background: white;
+    border-radius: 4px;
+    padding: 12px;
+    display: none;
+    box-shadow: 0 0px 3px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    position: relative;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.dropdown-menu-01.active,
+.dropdown-menu-02.active,
+.dropdown-menu-03.active {
+    box-shadow: none;
+    background: none;
+}
+
+.dropdown-menu {
+    font-family: "KoHo-Regular", "KoHo", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.dropdown-cards-01 .card-content.active,
+.dropdown-cards-02 .card-content.active,
+.dropdown-cards-03 .card-content.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdown-cards,
+.dropdown-cards-02 {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.card-content {
+    background: white;
+    border-radius: 4px;
+    padding: 12px;
+    display: none;
+    box-shadow: 0 0px 3px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    position: relative;
+    width: 100%;
 }
 
 .card-content.active {

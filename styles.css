@@ -620,10 +620,10 @@ body {
 
 .dropdown-cards-01 .card-content {
     background: white;
-    border-radius: 4px;
-    padding: 12px;
+    /* border-radius: 4px; */
+    padding: 16px 24px;
     display: none;
-    box-shadow: 0 0px 3px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 0px 3px rgba(0, 0, 0, 0.2); */
     margin-top: 10px;
     opacity: 0;
     transform: translateY(-10px);
@@ -657,9 +657,9 @@ body {
 .dropdown-cards-02 .card-content {
     background: white;
     border-radius: 4px;
-    padding: 12px;
+    padding: 16px 24px;
     display: none;
-    box-shadow: 0 0px 3px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 0px 3px rgba(0, 0, 0, 0.2); */
     opacity: 0;
     transform: translateY(-10px);
     transition: opacity 0.3s ease, transform 0.3s ease;
@@ -693,9 +693,9 @@ body {
 .dropdown-cards-03 .card-content {
     background: white;
     border-radius: 4px;
-    padding: 12px;
+    padding: 0px 24px 16px 24px;
     display: none;
-    box-shadow: 0 0px 3px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 0px 3px rgba(0, 0, 0, 0.2); */
     opacity: 0;
     transform: translateY(-10px);
     transition: opacity 0.3s ease, transform 0.3s ease;
@@ -707,8 +707,8 @@ body {
 .dropdown-menu-01.active,
 .dropdown-menu-02.active,
 .dropdown-menu-03.active {
-    box-shadow: none;
-    background: none;
+    box-shadow: none!important;
+    background: none!important;
 }
 
 .dropdown-menu {
@@ -734,10 +734,10 @@ body {
 
 .card-content {
     background: white;
-    border-radius: 4px;
-    padding: 12px;
+    /* border-radius: 4px; */
+    /* padding: 16px 24px; */
     display: none;
-    box-shadow: 0 0px 3px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 0px 3px rgba(0, 0, 0, 0.2); */
     opacity: 0;
     transform: translateY(-10px);
     transition: opacity 0.3s ease, transform 0.3s ease;
@@ -750,6 +750,7 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
+
 
 .earning-detail {
     display: flex;
@@ -785,9 +786,9 @@ body {
 
 .stats-card {
     background: white;
-    border: 1px solid #e6e6e6;
+    /* border: 1px solid #e6e6e6; */
     border-radius: 4px;
-    margin-top: 54px;
+    /* margin-top: 54px; */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -801,7 +802,7 @@ body {
 }
 
 .stats-content {
-    padding: 15px;
+    padding: 16px 24px;
 }
 
 .mg-12 {
@@ -842,4 +843,8 @@ body {
 
 .stat-value.positive {
     color: #28a745;
+}
+
+.dropdown-menu-03.active {
+    margin-top: 10px;
 }
